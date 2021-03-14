@@ -8,7 +8,7 @@ import { ProductDetailComponent } from './component/product-detail/product-detai
 const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'product', component: ProductListComponent },
-    { path: 'product/:id', component: ProductDetailComponent },
+    { path: 'product/detail/:id', component: ProductDetailComponent },
     { path: '**', redirectTo: 'home' }
 ];
 
