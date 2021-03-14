@@ -6,10 +6,10 @@ import { ProductListComponent } from './component/product-list/product-list.comp
 import { ProductDetailComponent } from './component/product-detail/product-detail.component';
 
 const appRoutes: Routes = [
-    { path: 'home',     component:  HomeComponent },
-    { path: 'product',  component:  ProductListComponent},
-    { path: 'product/:id',  component:  ProductDetailComponent},
-    { path: '**',   redirectTo: 'home'}
+    { path: 'home', component: HomeComponent },
+    { path: 'product', component: ProductListComponent },
+    { path: 'product/:id', component: ProductDetailComponent },
+    { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({
@@ -17,8 +17,9 @@ const appRoutes: Routes = [
     imports: [
         CommonModule,
         RouterModule.forRoot(appRoutes, {
-    initialNavigation: 'enabled'
-})
+            initialNavigation: 'enabled',
+            onSameUrlNavigation: 'reload'
+        })
     ],
     exports: [
         RouterModule
